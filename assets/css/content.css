@@ -1,0 +1,734 @@
+/**
+ * N0KMO LCARS — typography, content elements and block styles.
+ *
+ * Loaded on the front end and in the block editor, where WordPress scopes
+ * every selector to the editor canvas. Keep generic element selectors away
+ * from buttons and form fields so the editor's own controls are left alone.
+ *
+ * @package N0KMO_LCARS
+ */
+
+/* Headings ---------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 2rem 0 0.75rem;
+	font-family: var(--lcars-font);
+	font-weight: 500;
+	line-height: 1.15;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	overflow-wrap: break-word;
+}
+
+h1 {
+	color: var(--lcars-h1);
+	font-size: 2.75rem;
+}
+
+h2 {
+	color: var(--lcars-h2);
+	font-size: 2.1rem;
+}
+
+h3 {
+	color: var(--lcars-h3);
+	font-size: 1.7rem;
+}
+
+h4 {
+	color: var(--lcars-h4);
+	font-size: 1.4rem;
+}
+
+h5 {
+	color: var(--lcars-accent-1);
+	font-size: 1.2rem;
+}
+
+h6 {
+	color: var(--lcars-muted);
+	font-size: 1.05rem;
+	letter-spacing: 0.08em;
+}
+
+/* Text -------------------------------------------------------------------- */
+
+p,
+ul,
+ol,
+dl,
+address,
+table,
+figure,
+pre,
+blockquote {
+	margin-top: 0;
+	margin-bottom: 1.25rem;
+}
+
+a {
+	color: var(--lcars-link);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.18em;
+}
+
+a:hover {
+	color: var(--lcars-link-hover);
+	text-decoration-thickness: 2px;
+}
+
+strong,
+b {
+	font-weight: 600;
+}
+
+small {
+	font-size: 0.85em;
+}
+
+mark {
+	padding: 0 0.2em;
+	background: var(--lcars-sunflower);
+	color: var(--lcars-on-color);
+}
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+hr {
+	height: 0.6rem;
+	margin: 2.5rem 0;
+	background: var(--lcars-accent-2);
+	border: 0;
+	border-radius: 999px;
+}
+
+ul,
+ol {
+	padding-left: 1.5rem;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+li::marker {
+	color: var(--lcars-accent-1);
+}
+
+dt {
+	color: var(--lcars-accent-2);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+dd {
+	margin: 0 0 0.75rem 1.5rem;
+}
+
+img,
+video,
+iframe,
+embed,
+object {
+	max-width: 100%;
+}
+
+img,
+video {
+	height: auto;
+}
+
+figcaption,
+.wp-caption-text,
+.wp-element-caption {
+	margin-top: 0.5rem;
+	color: var(--lcars-muted);
+	font-size: 0.95rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+/* Code -------------------------------------------------------------------- */
+
+code,
+kbd,
+samp,
+pre {
+	font-family: var(--lcars-font-mono);
+	font-size: 0.85em;
+	letter-spacing: 0;
+}
+
+:not(pre) > code,
+kbd {
+	padding: 0.1em 0.35em;
+	background: #1a1a26;
+	border-radius: 0.25em;
+	color: var(--lcars-honey);
+}
+
+pre,
+.wp-block-code {
+	overflow-x: auto;
+	padding: 1rem 1.25rem;
+	background: #0d0d16;
+	border: solid var(--lcars-accent-3);
+	border-width: 0 0 0 0.75rem;
+	border-radius: 1rem 0 0 1rem;
+	color: var(--lcars-ice);
+	line-height: 1.5;
+	white-space: pre;
+}
+
+pre code,
+.wp-block-code code {
+	padding: 0;
+	background: none;
+	color: inherit;
+	font-size: inherit;
+}
+
+/* Quotes ------------------------------------------------------------------ */
+
+blockquote,
+.wp-block-quote {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0.25rem 0 0.25rem 1.5rem;
+	border-left: 0.75rem solid var(--lcars-accent-2);
+	border-radius: 0.75rem 0 0 0.75rem;
+	color: var(--lcars-violet-creme);
+	font-size: 1.35rem;
+}
+
+blockquote p:last-child,
+.wp-block-quote p:last-child {
+	margin-bottom: 0.5rem;
+}
+
+blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote .wp-block-quote__citation {
+	display: block;
+	color: var(--lcars-muted);
+	font-size: 1rem;
+	font-style: normal;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.wp-block-quote.is-style-large,
+.wp-block-quote.is-large {
+	font-size: 1.75rem;
+}
+
+.wp-block-pullquote {
+	margin: 2.5rem 0;
+	padding: 1.5rem 2rem;
+	border: solid var(--lcars-accent-1);
+	border-width: 0.5rem 0;
+	color: var(--lcars-text);
+	text-align: center;
+}
+
+.wp-block-pullquote blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: inherit;
+	font-size: 1.75rem;
+	line-height: 1.3;
+}
+
+/* Tables ------------------------------------------------------------------ */
+
+table,
+.wp-block-table table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: var(--lcars-gap);
+}
+
+.wp-block-table {
+	overflow-x: auto;
+}
+
+th,
+td {
+	padding: 0.4rem 0.75rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+thead th,
+.wp-block-table thead th {
+	background: var(--lcars-accent-1);
+	color: var(--lcars-on-color);
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	text-align: right;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
+
+tbody th {
+	background: var(--lcars-accent-2);
+	color: var(--lcars-on-color);
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+td {
+	background: #0d0d16;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	border: 0;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) td {
+	background: #161626;
+}
+
+.wp-block-table.is-style-stripes {
+	border-bottom: 0;
+}
+
+.wp-block-table figcaption {
+	text-align: left;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.wp-block-button .wp-block-button__link,
+.wp-block-file .wp-block-file__button,
+.wp-element-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.5rem;
+	padding: 0.35rem 1.4rem;
+	background-color: var(--lcars-accent-1);
+	border: 0;
+	border-radius: 999px;
+	color: var(--lcars-on-color);
+	font-family: var(--lcars-font);
+	font-size: 1.1rem;
+	line-height: 1.2;
+	letter-spacing: 0.06em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-file .wp-block-file__button:hover {
+	color: var(--lcars-on-color);
+	filter: brightness(1.2);
+}
+
+.wp-block-buttons > .wp-block-button:not(.is-style-outline):nth-child(4n + 2) .wp-block-button__link:not(.has-background) {
+	background-color: var(--lcars-accent-2);
+}
+
+.wp-block-buttons > .wp-block-button:not(.is-style-outline):nth-child(4n + 3) .wp-block-button__link:not(.has-background) {
+	background-color: var(--lcars-accent-3);
+}
+
+.wp-block-buttons > .wp-block-button:not(.is-style-outline):nth-child(4n + 4) .wp-block-button__link:not(.has-background) {
+	background-color: var(--lcars-accent-4);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background) {
+	background: transparent;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border: 2px solid currentColor;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+	color: var(--lcars-accent-1);
+}
+
+/* Block style: LCARS Panel button (rectangular, label bottom right). */
+.wp-block-button.is-style-lcars-panel .wp-block-button__link {
+	align-items: flex-end;
+	justify-content: flex-end;
+	min-width: 8rem;
+	min-height: 3.5rem;
+	padding: 0.3rem 0.6rem;
+	border-radius: 0;
+	text-align: right;
+}
+
+.wp-block-buttons:has(> .is-style-lcars-panel) {
+	gap: var(--lcars-gap);
+}
+
+/* Separators -------------------------------------------------------------- */
+
+.wp-block-separator {
+	height: 0.6rem;
+	margin: 2.5rem 0;
+	background-color: var(--lcars-accent-2);
+	border: 0;
+	border-radius: 999px;
+	opacity: 1;
+}
+
+.wp-block-separator.has-background:not(.is-style-dots) {
+	height: 0.6rem;
+	border: 0;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.is-style-lcars-bar) {
+	max-width: 12rem;
+}
+
+.wp-block-separator.is-style-wide {
+	max-width: none;
+}
+
+.wp-block-separator.is-style-dots {
+	height: auto;
+	background: none !important;
+	border-radius: 0;
+	color: var(--lcars-accent-2);
+}
+
+.wp-block-separator.is-style-dots::before {
+	color: inherit;
+	font-size: 1.75rem;
+	letter-spacing: 1.5em;
+}
+
+/* Block style: LCARS Bar (segmented, full width). */
+.wp-block-separator.is-style-lcars-bar {
+	max-width: none;
+	height: 1.25rem;
+	background:
+		linear-gradient(
+			to right,
+			var(--lcars-accent-1) 0 32%,
+			transparent 32% calc(32% + var(--lcars-gap)),
+			var(--lcars-accent-2) calc(32% + var(--lcars-gap)) 46%,
+			transparent 46% calc(46% + var(--lcars-gap)),
+			var(--lcars-accent-4) calc(46% + var(--lcars-gap)) 52%,
+			transparent 52% calc(52% + var(--lcars-gap)),
+			var(--lcars-accent-3) calc(52% + var(--lcars-gap)) 88%,
+			transparent 88% calc(88% + var(--lcars-gap)),
+			var(--lcars-accent-1) calc(88% + var(--lcars-gap)) 100%
+		) !important;
+	border-radius: 0.625rem 0 0 0.625rem;
+}
+
+/* Headings, lists and groups ---------------------------------------------- */
+
+/* Block style: LCARS Text Bar heading. */
+.is-style-lcars-text-bar {
+	--lcars-bar-color: currentColor;
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+.is-style-lcars-text-bar::before,
+.is-style-lcars-text-bar::after {
+	content: "";
+	height: 0.7em;
+	background: var(--lcars-bar-color);
+}
+
+.is-style-lcars-text-bar::before {
+	flex: 0 0 1.2em;
+	border-radius: 0.35em 0 0 0.35em;
+}
+
+.is-style-lcars-text-bar::after {
+	flex: 1 1 auto;
+	min-width: 1em;
+	border-radius: 0 0.35em 0.35em 0;
+}
+
+.is-style-lcars-text-bar.has-text-align-center::before {
+	flex: 1 1 auto;
+}
+
+.is-style-lcars-text-bar.has-text-align-right::after {
+	flex: 0 0 1.2em;
+}
+
+.is-style-lcars-text-bar.has-text-align-right::before {
+	flex: 1 1 auto;
+}
+
+/* Block style: LCARS List. */
+.is-style-lcars-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.is-style-lcars-list li {
+	position: relative;
+	padding: 0.15rem 0 0.15rem 2rem;
+}
+
+.is-style-lcars-list li::before {
+	content: "";
+	position: absolute;
+	top: 0.55em;
+	left: 0;
+	width: 1.4rem;
+	height: 0.7rem;
+	background: var(--lcars-accent-1);
+	border-radius: 0.35rem;
+}
+
+.is-style-lcars-list li:nth-child(4n + 2)::before {
+	background: var(--lcars-accent-2);
+}
+
+.is-style-lcars-list li:nth-child(4n + 3)::before {
+	background: var(--lcars-accent-3);
+}
+
+.is-style-lcars-list li:nth-child(4n + 4)::before {
+	background: var(--lcars-accent-4);
+}
+
+/* Block style: LCARS Frame group (a bracket with elbows top and bottom). */
+.wp-block-group.is-style-lcars-frame {
+	--lcars-frame-color: var(--lcars-accent-2);
+	margin: 2.5rem 0;
+	padding: 1.25rem 1.5rem 1.25rem 1.75rem;
+	border: solid var(--lcars-frame-color);
+	border-width: 1.25rem 0 1.25rem 3rem;
+	border-radius: 4.5rem 0 0 4.5rem;
+}
+
+.wp-block-group.is-style-lcars-frame.has-border-color {
+	--lcars-frame-color: currentColor;
+}
+
+.wp-block-group.is-style-lcars-frame > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-group.is-style-lcars-frame > :last-child {
+	margin-bottom: 0;
+}
+
+/* Other blocks ------------------------------------------------------------ */
+
+.wp-block-image img {
+	display: block;
+}
+
+.wp-block-image.is-style-rounded img {
+	border-radius: 9999px;
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+	color: var(--lcars-space-white);
+}
+
+.wp-block-cover .wp-block-cover__inner-container > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-gallery {
+	margin-bottom: 1.5rem;
+}
+
+.wp-block-search .wp-block-search__input {
+	padding: 0.5rem 0.875rem;
+	background: var(--lcars-bg);
+	border: 2px solid var(--lcars-accent-3);
+	border-left-width: 0.75rem;
+	border-radius: 0 0.5rem 0.5rem 0;
+	color: var(--lcars-text);
+	font-family: var(--lcars-font);
+	font-size: 1.1rem;
+}
+
+.wp-block-search .wp-block-search__button {
+	margin-left: var(--lcars-gap);
+	border-radius: 0 999px 999px 0;
+}
+
+.wp-block-search__label {
+	color: var(--lcars-muted);
+	font-size: 1rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.wp-block-latest-posts.is-grid li {
+	margin-bottom: 1.5rem;
+}
+
+.wp-block-tag-cloud a,
+.tagcloud a {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.15rem 0.85rem;
+	background: var(--lcars-accent-3);
+	border-radius: 999px;
+	color: var(--lcars-on-color);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.wp-block-tag-cloud a:nth-child(3n + 2),
+.tagcloud a:nth-child(3n + 2) {
+	background: var(--lcars-accent-4);
+}
+
+.wp-block-tag-cloud a:nth-child(3n + 3),
+.tagcloud a:nth-child(3n + 3) {
+	background: var(--lcars-accent-2);
+}
+
+.wp-block-tag-cloud a:hover,
+.tagcloud a:hover {
+	color: var(--lcars-on-color);
+	filter: brightness(1.2);
+}
+
+.wp-block-calendar table caption,
+.wp-calendar-table caption {
+	margin-bottom: 0.5rem;
+	color: var(--lcars-accent-2);
+	text-transform: uppercase;
+}
+
+.wp-block-calendar th,
+.wp-calendar-table th {
+	background: var(--lcars-accent-3);
+	color: var(--lcars-on-color);
+	text-align: center;
+}
+
+.wp-block-calendar td,
+.wp-calendar-table td {
+	text-align: center;
+}
+
+.wp-calendar-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+
+.wp-block-details summary {
+	color: var(--lcars-accent-1);
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.wp-block-verse {
+	font-family: inherit;
+}
+
+/* Alignments and core classes --------------------------------------------- */
+
+.entry-content > *,
+.page-content > * {
+	max-width: var(--lcars-content-w);
+}
+
+.entry-content > .alignwide,
+.page-content > .alignwide {
+	max-width: var(--lcars-wide-w);
+}
+
+.entry-content > .alignfull,
+.page-content > .alignfull {
+	max-width: none;
+}
+
+.alignleft {
+	float: left;
+	margin: 0.3rem 1.5rem 1rem 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.3rem 0 1rem 1.5rem;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.entry-content::after,
+.comment-content::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(var(--lcars-gallery-columns, 3), minmax(0, 1fr));
+	gap: var(--lcars-gap);
+	margin-bottom: 1.5rem;
+}
+
+.gallery-columns-1 {
+	--lcars-gallery-columns: 1;
+}
+
+.gallery-columns-2 {
+	--lcars-gallery-columns: 2;
+}
+
+.gallery-columns-4 {
+	--lcars-gallery-columns: 4;
+}
+
+.gallery-columns-5 {
+	--lcars-gallery-columns: 5;
+}
+
+.gallery-columns-6 {
+	--lcars-gallery-columns: 6;
+}
+
+.gallery-item {
+	margin: 0;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.has-text-align-center {
+	text-align: center;
+}
+
+.has-text-align-right {
+	text-align: right;
+}
