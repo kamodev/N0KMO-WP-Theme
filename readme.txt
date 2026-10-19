@@ -22,6 +22,7 @@ N0KMO LCARS gives a WordPress site the look of a Starfleet LCARS console:
 * Optional LCARS chirps on button presses, synthesised in the browser with no audio files.
 * Sidebar and footer widget areas, threaded comments, a full-width template and a custom logo.
 * Block editor styles and an LCARS colour palette, plus block styles (LCARS Panel button, LCARS Text Bar heading, LCARS Bar separator, LCARS Frame group, LCARS List) and patterns.
+* Elementor support: Canvas and Full Width templates, Hide Title, full-width layouts and Elementor Pro Theme Builder locations (header, footer, single, archive).
 
 Star Trek and LCARS are trademarks of CBS Studios Inc. This theme is an unofficial fan work and is not affiliated with or endorsed by CBS Studios, Paramount or TheLCARS.com.
 
@@ -46,11 +47,27 @@ The header buttons list the home page and the top-level pages, and the side colu
 
 The theme uses a common fan convention: 1987, the year The Next Generation premiered, is stardate 41000, and each calendar year adds 1000.
 
+= Does it work with Elementor? =
+
+Yes, with Elementor and Elementor Pro:
+
+* Elementor Canvas shows a blank page in the theme's colours and font. Elementor Full Width keeps the LCARS frame and gives the layout the whole content area, with no sidebar.
+* On the default page template, Elementor layouts use the full content width and the sidebar stays.
+* The "Hide Title" page setting hides the text bar and the title.
+* Elementor Pro Theme Builder templates can replace the header (the LCARS top frame), the footer (inside the frame), and single and archive content, which also hides the sidebar.
+* Stretched sections stretch to the content area rather than the window, so they don't cover the side column.
+* When the theme is activated, it switches off Elementor's default colours and fonts, unless you have already set them, so widgets pick up the LCARS colours and Antonio. You can switch them back on in Elementor's settings.
+* Add lcars-heading-bar (Heading), lcars-panel-button (Button) or lcars-frame (Container, Section or Column) under Advanced > CSS Classes for the LCARS text bar, panel button and elbow frame.
+
 = Can I turn off the animation, clock or sounds? =
 
 Yes. Each one has a checkbox under Appearance > Customize > LCARS Interface. Sounds are off by default.
 
 == Changelog ==
+
+= 1.1.0 =
+* Elementor and Elementor Pro support: Theme Builder header, footer, single and archive locations; Canvas and Full Width templates; Hide Title; full-width Elementor layouts; stretched sections kept inside the frame; LCARS defaults for Elementor buttons; lcars-heading-bar, lcars-panel-button and lcars-frame helper classes.
+* The bottom bar now reserves the space under its inner curve, so any footer clears it.
 
 = 1.0.0 =
 * Initial release.

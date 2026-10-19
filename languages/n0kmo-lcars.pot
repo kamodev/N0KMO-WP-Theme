@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: N0KMO LCARS 1.0.0\n"
+"Project-Id-Version: N0KMO LCARS 1.1.0\n"
 "Report-Msgid-Bugs-To: https://n0kmo.com/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,21 +13,21 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Domain: n0kmo-lcars\n"
 
-#: 404.php:15
+#: 404.php:17
 msgid "Error"
 msgstr ""
 
-#: 404.php:17
+#: 404.php:19
 msgid "Sector not found"
 msgstr ""
 
-#: 404.php:21
+#: 404.php:23
 msgid ""
 "The record you requested is not in the library computer. It may have been "
 "moved or deleted, or the address may be mistyped. Try a search instead."
 msgstr ""
 
-#: 404.php:23
+#: 404.php:25
 msgid "Return to main screen"
 msgstr ""
 
@@ -43,21 +43,21 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:20
+#: footer.php:21
 msgid "Footer menu"
 msgstr ""
 
 #. translators: 1: Link to TheLCARS.com. 2: Link to WordPress.org.
-#: footer.php:41
+#: footer.php:42
 #, php-format
 msgid "LCARS interface styling inspired by %1$s. Powered by %2$s."
 msgstr ""
 
-#: footer.php:43
+#: footer.php:44
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:48
+#: footer.php:49
 msgid "Back to top"
 msgstr ""
 
@@ -65,23 +65,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:27 inc/customizer.php:209 inc/template-functions.php:130
+#: header.php:28 inc/customizer.php:209 inc/template-functions.php:130
 msgid "Home"
 msgstr ""
 
-#: header.php:49
+#: header.php:50
 msgid "Main menu"
 msgstr ""
 
-#: header.php:50
+#: header.php:51
 msgid "Menu"
 msgstr ""
 
-#: header.php:81
+#: header.php:83
 msgid "Screen"
 msgstr ""
 
-#: header.php:81
+#: header.php:83
 msgid "Top"
 msgstr ""
 
@@ -227,7 +227,7 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:109 inc/template-tags.php:253
+#: inc/template-tags.php:109 inc/template-tags.php:269
 msgid "Stardate"
 msgstr ""
 
@@ -239,105 +239,105 @@ msgstr ""
 msgid "Side menu"
 msgstr ""
 
-#: inc/template-tags.php:207
+#: inc/template-tags.php:223
 msgid "Priority record"
 msgstr ""
 
 #. translators: %s: Zero-padded page ID.
-#: inc/template-tags.php:210
+#: inc/template-tags.php:226
 #, php-format
 msgid "Library record %s"
 msgstr ""
 
 #. translators: %s: Zero-padded post ID.
-#: inc/template-tags.php:213
+#: inc/template-tags.php:229
 #, php-format
 msgid "Log entry %s"
 msgstr ""
 
-#: inc/template-tags.php:245
+#: inc/template-tags.php:261
 msgid "Posted on"
 msgstr ""
 
-#: inc/template-tags.php:260
+#: inc/template-tags.php:276
 msgid "Author"
 msgstr ""
 
-#: inc/template-tags.php:268
+#: inc/template-tags.php:284
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:269
+#: inc/template-tags.php:285
 msgid "1 comment"
 msgstr ""
 
 #. translators: %: Number of comments.
-#: inc/template-tags.php:271
+#: inc/template-tags.php:287
 #, php-format
 msgid "% comments"
 msgstr ""
 
-#: inc/template-tags.php:289
+#: inc/template-tags.php:305
 msgid "Filed under"
 msgstr ""
 
-#: inc/template-tags.php:299
+#: inc/template-tags.php:315
 msgid "Tags"
 msgstr ""
 
 #. translators: %s: Post title. Only visible to screen readers.
-#: inc/template-tags.php:308
+#: inc/template-tags.php:324
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:343
+#: inc/template-tags.php:359
 msgid "Access record"
 msgstr ""
 
-#: inc/template-tags.php:355
+#: inc/template-tags.php:371
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:356
+#: inc/template-tags.php:372
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:368
+#: inc/template-tags.php:384
 msgid "Category"
 msgstr ""
 
-#: inc/template-tags.php:372
+#: inc/template-tags.php:388
 msgid "Tag"
 msgstr ""
 
-#: inc/template-tags.php:376
+#: inc/template-tags.php:392
 msgid "Personnel file"
 msgstr ""
 
-#: inc/template-tags.php:380
+#: inc/template-tags.php:396
 msgid "Chronological index"
 msgstr ""
 
-#: inc/template-tags.php:392
+#: inc/template-tags.php:408
 msgid "Collection"
 msgstr ""
 
-#: inc/template-tags.php:395
+#: inc/template-tags.php:411
 msgid "Archive"
 msgstr ""
 
 #. translators: 1: Current year. 2: Site name.
-#: inc/template-tags.php:408
+#: inc/template-tags.php:424
 #, php-format
 msgid "Content copyright &copy; %1$s %2$s"
 msgstr ""
 
-#: index.php:16
+#: index.php:18
 msgid "Latest log entries"
 msgstr ""
 
-#: index.php:18
+#: index.php:20
 msgid "Log entries"
 msgstr ""
 
@@ -441,18 +441,18 @@ msgctxt "Pattern button"
 msgid "Details"
 msgstr ""
 
-#: search.php:14
+#: search.php:16
 msgid "Library search"
 msgstr ""
 
 #. translators: %s: Search query.
-#: search.php:19
+#: search.php:21
 #, php-format
 msgid "Results for: %s"
 msgstr ""
 
 #. translators: %s: Number of search results.
-#: search.php:30
+#: search.php:32
 #, php-format
 msgid "%s record located"
 msgid_plural "%s records located"
@@ -474,11 +474,11 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: single.php:22
+#: single.php:24
 msgid "Previous record"
 msgstr ""
 
-#: single.php:23
+#: single.php:25
 msgid "Next record"
 msgstr ""
 
@@ -490,9 +490,10 @@ msgid ""
 "panels, segmented colour bars, an animated data cascade, LCARS button "
 "navigation, a side-panel menu, a live UTC clock with stardates, and four "
 "colour schemes (Classic, Nemesis Blue, Lower Decks and Red Alert). It also "
-"includes LCARS block styles and patterns for the block editor. Star Trek and "
-"LCARS are trademarks of CBS Studios Inc.; this is an unofficial fan work and "
-"is not affiliated with or endorsed by them."
+"includes LCARS block styles and patterns for the block editor, and works "
+"with Elementor and the Elementor Pro Theme Builder. Star Trek and LCARS are "
+"trademarks of CBS Studios Inc.; this is an unofficial fan work and is not "
+"affiliated with or endorsed by them."
 msgstr ""
 
 #. Author of the theme
@@ -533,11 +534,11 @@ msgstr ""
 msgid "The library computer has no records here. A search may help."
 msgstr ""
 
-#: template-parts/content-page.php:24 template-parts/content-single.php:25
+#: template-parts/content-page.php:26 template-parts/content-single.php:27
 msgid "Page"
 msgstr ""
 
-#: template-parts/content-page.php:24 template-parts/content-single.php:25
+#: template-parts/content-page.php:26 template-parts/content-single.php:27
 msgid "Pages:"
 msgstr ""
 

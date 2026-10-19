@@ -22,56 +22,58 @@
 
 <div id="page" class="site wrap-standard">
 
-	<header id="masthead" class="site-header wrap">
-		<div class="left-frame-top">
-			<a class="panel-1" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( n0kmo_lcars_option( 'panel_label' ) ); ?><span class="screen-reader-text"> <?php esc_html_e( 'Home', 'n0kmo-lcars' ); ?></span></a>
-			<div class="panel-2">
-				<?php n0kmo_lcars_panel_2_readout(); ?>
-			</div>
-		</div>
-
-		<div class="right-frame-top">
-			<div class="banner">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php endif; ?>
-				<div class="site-branding">
-					<?php
-					n0kmo_lcars_site_title();
-					n0kmo_lcars_site_description();
-					?>
+	<?php if ( ! n0kmo_lcars_elementor_location( 'header' ) ) : ?>
+		<header id="masthead" class="site-header wrap">
+			<div class="left-frame-top">
+				<a class="panel-1" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( n0kmo_lcars_option( 'panel_label' ) ); ?><span class="screen-reader-text"> <?php esc_html_e( 'Home', 'n0kmo-lcars' ); ?></span></a>
+				<div class="panel-2">
+					<?php n0kmo_lcars_panel_2_readout(); ?>
 				</div>
 			</div>
 
-			<div class="data-cascade-button-group">
-				<?php n0kmo_lcars_data_cascade(); ?>
+			<div class="right-frame-top">
+				<div class="banner">
+					<?php if ( has_custom_logo() ) : ?>
+						<div class="site-logo"><?php the_custom_logo(); ?></div>
+					<?php endif; ?>
+					<div class="site-branding">
+						<?php
+						n0kmo_lcars_site_title();
+						n0kmo_lcars_site_description();
+						?>
+					</div>
+				</div>
 
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main menu', 'n0kmo-lcars' ); ?>">
-					<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'n0kmo-lcars' ); ?></button>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary',
-							'container'      => false,
-							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'lcars-nav-buttons',
-							'depth'          => 1,
-							'fallback_cb'    => 'n0kmo_lcars_primary_menu_fallback',
-						)
-					);
-					?>
-				</nav>
-			</div>
+				<div class="data-cascade-button-group">
+					<?php n0kmo_lcars_data_cascade(); ?>
 
-			<div class="bar-panel first-bar-panel" aria-hidden="true">
-				<div class="bar-1"></div>
-				<div class="bar-2"></div>
-				<div class="bar-3"></div>
-				<div class="bar-4"></div>
-				<div class="bar-5"></div>
+					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main menu', 'n0kmo-lcars' ); ?>">
+						<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'n0kmo-lcars' ); ?></button>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary',
+								'container'      => false,
+								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'lcars-nav-buttons',
+								'depth'          => 1,
+								'fallback_cb'    => 'n0kmo_lcars_primary_menu_fallback',
+							)
+						);
+						?>
+					</nav>
+				</div>
+
+				<div class="bar-panel first-bar-panel" aria-hidden="true">
+					<div class="bar-1"></div>
+					<div class="bar-2"></div>
+					<div class="bar-3"></div>
+					<div class="bar-4"></div>
+					<div class="bar-5"></div>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
+	<?php endif; ?>
 
 	<div id="gap" class="wrap site-frame">
 		<div class="left-frame">

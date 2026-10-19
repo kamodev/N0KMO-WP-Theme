@@ -10,26 +10,30 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<header class="page-header">
-		<p class="lcars-text-bar"><?php echo esc_html( n0kmo_lcars_archive_label() ); ?></p>
+	<?php if ( ! n0kmo_lcars_elementor_location( 'archive' ) ) : ?>
+
+		<header class="page-header">
+			<p class="lcars-text-bar"><?php echo esc_html( n0kmo_lcars_archive_label() ); ?></p>
+			<?php
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="archive-description">', '</div>' );
+			?>
+		</header>
+
 		<?php
-		the_archive_title( '<h1 class="page-title">', '</h1>' );
-		the_archive_description( '<div class="archive-description">', '</div>' );
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
+				get_template_part( 'template-parts/content', get_post_type() );
+			endwhile;
+
+			n0kmo_lcars_pagination();
+		else :
+			get_template_part( 'template-parts/content', 'none' );
+		endif;
 		?>
-	</header>
 
-	<?php
-	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
-			get_template_part( 'template-parts/content', get_post_type() );
-		endwhile;
-
-		n0kmo_lcars_pagination();
-	else :
-		get_template_part( 'template-parts/content', 'none' );
-	endif;
-	?>
+	<?php endif; ?>
 
 </main>
 

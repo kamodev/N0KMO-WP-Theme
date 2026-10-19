@@ -1,0 +1,97 @@
+/**
+ * N0KMO LCARS — Elementor compatibility.
+ *
+ * Loaded only when Elementor is active (see inc/enqueue.php). Selectors are
+ * kept light so Elementor's Site Settings (.elementor-kit-N …) and per-widget
+ * controls still take precedence over these defaults.
+ *
+ * @package N0KMO_LCARS
+ */
+
+/* Layout ------------------------------------------------------------------ */
+
+/* Elementor layouts use the whole content area, not the reading width. */
+.entry-content > .elementor,
+.page-content > .elementor {
+	max-width: none;
+}
+
+/*
+ * "Stretch section" widens a section to the browser window, which would run
+ * it over the LCARS side column. Inside the frame, stretched sections fill the
+ * content area instead. Canvas pages have no frame and stretch as normal.
+ */
+.right-frame .elementor-section.elementor-section-stretched {
+	left: auto !important;
+	width: auto !important;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+/*
+ * LCARS colours and type by default. "body" outranks only Elementor's base
+ * button rule, so Site Settings and widget controls still win. Elementor's
+ * size presets may keep their own corner radius.
+ */
+body .elementor-button {
+	background-color: var(--lcars-accent-1);
+	border-radius: 999px;
+	color: var(--lcars-on-color);
+	fill: var(--lcars-on-color);
+	font-family: inherit;
+	letter-spacing: 0.06em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+body .elementor-button:is(:hover, :focus, :visited) {
+	color: var(--lcars-on-color);
+}
+
+/* Helper classes ----------------------------------------------------------
+ * Add these in a widget's or container's Advanced > CSS Classes field.
+ */
+
+/* lcars-heading-bar (Heading widget): the heading set into a rounded bar. */
+.elementor-widget-heading.lcars-heading-bar .elementor-heading-title {
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+.elementor-widget-heading.lcars-heading-bar .elementor-heading-title::before,
+.elementor-widget-heading.lcars-heading-bar .elementor-heading-title::after {
+	content: "";
+	height: 0.7em;
+	background: currentColor;
+}
+
+.elementor-widget-heading.lcars-heading-bar .elementor-heading-title::before {
+	flex: 0 0 1.2em;
+	border-radius: 0.35em 0 0 0.35em;
+}
+
+.elementor-widget-heading.lcars-heading-bar .elementor-heading-title::after {
+	flex: 1 1 auto;
+	min-width: 1em;
+	border-radius: 0 0.35em 0.35em 0;
+}
+
+/* lcars-panel-button (Button widget): rectangular, label in the lower right. */
+.elementor-widget-button.lcars-panel-button .elementor-button {
+	display: inline-flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	min-width: 8rem;
+	min-height: 3.5rem;
+	padding: 0.3rem 0.6rem;
+	border-radius: 0;
+	text-align: right;
+}
+
+/* lcars-frame (Container, Section or Column): an elbow bracket around it. */
+.elementor-element.lcars-frame {
+	border: solid var(--lcars-accent-2);
+	border-width: 1.25rem 0 1.25rem 3rem;
+	border-radius: 4.5rem 0 0 4.5rem;
+}

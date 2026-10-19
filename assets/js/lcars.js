@@ -114,6 +114,7 @@
 			'.menu-toggle',
 			'.lcars-button',
 			'.wp-block-button__link',
+			'.elementor-button',
 			'.page-numbers',
 			'.post-navigation a',
 			'.footer-menu a',
