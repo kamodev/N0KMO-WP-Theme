@@ -1,0 +1,47 @@
+/**
+ * N0KMO LCARS — block editor canvas.
+ *
+ * Loaded with tokens.css and content.css through add_editor_style(), which
+ * scopes these selectors to the editor canvas (body becomes
+ * .editor-styles-wrapper).
+ *
+ * @package N0KMO_LCARS
+ */
+
+body {
+	background: var(--lcars-bg);
+	color: var(--lcars-text);
+	font-family: var(--lcars-font);
+	font-size: 1.25rem;
+	line-height: 1.5;
+	letter-spacing: 0.015em;
+}
+
+/* The post title in the editor mirrors .entry-title on the front end. */
+.editor-post-title,
+.editor-post-title__input,
+.wp-block-post-title {
+	color: var(--lcars-h1);
+	font-family: var(--lcars-font);
+	font-size: clamp(2.2rem, 1.4rem + 3vw, 3.6rem);
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
+
+.wp-block {
+	max-width: var(--lcars-content-w);
+}
+
+.wp-block[data-align="wide"] {
+	max-width: var(--lcars-wide-w);
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+.block-editor-block-list__layout .wp-block-search__input {
+	min-width: 0;
+}

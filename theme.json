@@ -1,0 +1,214 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.2/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": false,
+		"color": {
+			"custom": true,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"defaultDuotone": false,
+			"gradients": [],
+			"palette": [
+				{
+					"slug": "black",
+					"name": "Black",
+					"color": "#000000"
+				},
+				{
+					"slug": "space-white",
+					"name": "Space White",
+					"color": "#f5f6fa"
+				},
+				{
+					"slug": "golden-orange",
+					"name": "Golden Orange",
+					"color": "#ff9900"
+				},
+				{
+					"slug": "orange",
+					"name": "Orange",
+					"color": "#ff8800"
+				},
+				{
+					"slug": "butterscotch",
+					"name": "Butterscotch",
+					"color": "#ff9966"
+				},
+				{
+					"slug": "peach",
+					"name": "Peach",
+					"color": "#ff8866"
+				},
+				{
+					"slug": "almond-creme",
+					"name": "Almond Creme",
+					"color": "#ffbbaa"
+				},
+				{
+					"slug": "honey",
+					"name": "Honey",
+					"color": "#ffcc99"
+				},
+				{
+					"slug": "sunflower",
+					"name": "Sunflower",
+					"color": "#ffcc66"
+				},
+				{
+					"slug": "african-violet",
+					"name": "African Violet",
+					"color": "#cc88ff"
+				},
+				{
+					"slug": "lilac",
+					"name": "Lilac",
+					"color": "#cc55ff"
+				},
+				{
+					"slug": "violet-creme",
+					"name": "Violet Creme",
+					"color": "#ddbbff"
+				},
+				{
+					"slug": "bluey",
+					"name": "Bluey",
+					"color": "#8899ff"
+				},
+				{
+					"slug": "blue",
+					"name": "Blue",
+					"color": "#5566ff"
+				},
+				{
+					"slug": "sky",
+					"name": "Sky",
+					"color": "#aaaaff"
+				},
+				{
+					"slug": "ice",
+					"name": "Ice",
+					"color": "#99ccff"
+				},
+				{
+					"slug": "gray",
+					"name": "Gray",
+					"color": "#666688"
+				},
+				{
+					"slug": "tomato",
+					"name": "Tomato",
+					"color": "#ff5555"
+				},
+				{
+					"slug": "red",
+					"name": "Red",
+					"color": "#cc4444"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "736px",
+			"wideSize": "1152px"
+		},
+		"spacing": {
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"%",
+				"vw"
+			]
+		},
+		"typography": {
+			"dropCap": false,
+			"fluid": false,
+			"fontFamilies": [
+				{
+					"slug": "antonio",
+					"name": "Antonio (LCARS)",
+					"fontFamily": "Antonio, \"Arial Narrow\", \"Avenir Next Condensed\", sans-serif"
+				},
+				{
+					"slug": "system-sans",
+					"name": "System sans-serif",
+					"fontFamily": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+				},
+				{
+					"slug": "monospace",
+					"name": "Monospace",
+					"fontFamily": "ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace"
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "small",
+					"name": "Small",
+					"size": "1rem"
+				},
+				{
+					"slug": "medium",
+					"name": "Medium",
+					"size": "1.25rem"
+				},
+				{
+					"slug": "large",
+					"name": "Large",
+					"size": "1.75rem"
+				},
+				{
+					"slug": "x-large",
+					"name": "Extra large",
+					"size": "2.5rem"
+				},
+				{
+					"slug": "xx-large",
+					"name": "Huge",
+					"size": "3.5rem"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#000000",
+			"text": "#f5f6fa"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--antonio)"
+		},
+		"elements": {
+			"button": {
+				"border": {
+					"radius": "999px",
+					"width": "0"
+				},
+				"color": {
+					"background": "var(--lcars-accent-1, #ff9900)",
+					"text": "#000000"
+				},
+				"typography": {
+					"fontFamily": "inherit",
+					"fontSize": "1.1rem",
+					"letterSpacing": "0.06em",
+					"lineHeight": "1.2",
+					"textTransform": "uppercase"
+				},
+				"spacing": {
+					"padding": {
+						"top": "0.35rem",
+						"right": "1.4rem",
+						"bottom": "0.35rem",
+						"left": "1.4rem"
+					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--lcars-link, #99ccff)"
+				}
+			}
+		}
+	}
+}

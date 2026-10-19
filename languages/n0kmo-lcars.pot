@@ -1,0 +1,677 @@
+# Copyright (C) 2026 N0KMO
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: N0KMO LCARS 1.0.0\n"
+"Report-Msgid-Bugs-To: https://n0kmo.com/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-19T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Domain: n0kmo-lcars\n"
+
+#: 404.php:15
+msgid "Error"
+msgstr ""
+
+#: 404.php:17
+msgid "Sector not found"
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"The record you requested is not in the library computer. It may have been "
+"moved or deleted, or the address may be mistyped. Try a search instead."
+msgstr ""
+
+#: 404.php:23
+msgid "Return to main screen"
+msgstr ""
+
+#. translators: %s: Number of comments.
+#: comments.php:21
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:46
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:20
+msgid "Footer menu"
+msgstr ""
+
+#. translators: 1: Link to TheLCARS.com. 2: Link to WordPress.org.
+#: footer.php:41
+#, php-format
+msgid "LCARS interface styling inspired by %1$s. Powered by %2$s."
+msgstr ""
+
+#: footer.php:43
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:48
+msgid "Back to top"
+msgstr ""
+
+#: header.php:21
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:27 inc/customizer.php:209 inc/template-functions.php:130
+msgid "Home"
+msgstr ""
+
+#: header.php:49
+msgid "Main menu"
+msgstr ""
+
+#: header.php:50
+msgid "Menu"
+msgstr ""
+
+#: header.php:81
+msgid "Screen"
+msgstr ""
+
+#: header.php:81
+msgid "Top"
+msgstr ""
+
+#: inc/block-editor.php:22
+msgid "LCARS Panel"
+msgstr ""
+
+#: inc/block-editor.php:26
+msgid "LCARS Text Bar"
+msgstr ""
+
+#: inc/block-editor.php:30
+msgid "LCARS Bar"
+msgstr ""
+
+#: inc/block-editor.php:34
+msgid "LCARS Frame"
+msgstr ""
+
+#: inc/block-editor.php:38
+msgid "LCARS List"
+msgstr ""
+
+#: inc/block-editor.php:55
+msgid "LCARS"
+msgstr ""
+
+#: inc/block-editor.php:56
+msgid "LCARS panels, frames and button clusters."
+msgstr ""
+
+#: inc/customizer.php:26
+msgid "LCARS Interface"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Colour scheme, header readouts and footer credits."
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Colour scheme"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Corner panel label"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Text on the top-left panel, which links to the home page."
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "Banner text"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Large header text. Leave empty to use the site title."
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Show the animated data cascade in the header"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "Show a live UTC clock in the header"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "Show stardates in the header and on posts"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid ""
+"Slash zeros in the banner, so a callsign like N0KMO does not read as NOKMO"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Play LCARS chirps when buttons are pressed"
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Use a standard sans-serif font for long-form text"
+msgstr ""
+
+#: inc/customizer.php:88
+msgid "Show the theme credit in the footer"
+msgstr ""
+
+#: inc/customizer.php:120
+msgid "Footer copyright text"
+msgstr ""
+
+#: inc/customizer.php:121
+msgid ""
+"Basic HTML is allowed; {year} becomes the current year. Leave empty for the "
+"default."
+msgstr ""
+
+#: inc/options.php:43
+msgid "Classic"
+msgstr ""
+
+#: inc/options.php:44
+msgid "Nemesis Blue"
+msgstr ""
+
+#: inc/options.php:45
+msgid "Lower Decks"
+msgstr ""
+
+#: inc/options.php:46
+msgid "Red Alert"
+msgstr ""
+
+#: inc/setup.php:25
+msgid "Header buttons"
+msgstr ""
+
+#: inc/setup.php:26
+msgid "Side panels"
+msgstr ""
+
+#: inc/setup.php:27 inc/setup.php:106
+msgid "Footer"
+msgstr ""
+
+#: inc/setup.php:95 sidebar.php:13
+msgid "Sidebar"
+msgstr ""
+
+#: inc/setup.php:97
+msgid ""
+"Shown beside posts and pages on wide screens and below them on small screens."
+msgstr ""
+
+#: inc/setup.php:108
+msgid "Shown in columns above the footer credits."
+msgstr ""
+
+#. translators: %s: Post title. Only visible to screen readers.
+#: inc/template-functions.php:85
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:109 inc/template-tags.php:253
+msgid "Stardate"
+msgstr ""
+
+#: inc/template-tags.php:130
+msgid "UTC"
+msgstr ""
+
+#: inc/template-tags.php:175
+msgid "Side menu"
+msgstr ""
+
+#: inc/template-tags.php:207
+msgid "Priority record"
+msgstr ""
+
+#. translators: %s: Zero-padded page ID.
+#: inc/template-tags.php:210
+#, php-format
+msgid "Library record %s"
+msgstr ""
+
+#. translators: %s: Zero-padded post ID.
+#: inc/template-tags.php:213
+#, php-format
+msgid "Log entry %s"
+msgstr ""
+
+#: inc/template-tags.php:245
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:260
+msgid "Author"
+msgstr ""
+
+#: inc/template-tags.php:268
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:269
+msgid "1 comment"
+msgstr ""
+
+#. translators: %: Number of comments.
+#: inc/template-tags.php:271
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: inc/template-tags.php:289
+msgid "Filed under"
+msgstr ""
+
+#: inc/template-tags.php:299
+msgid "Tags"
+msgstr ""
+
+#. translators: %s: Post title. Only visible to screen readers.
+#: inc/template-tags.php:308
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:343
+msgid "Access record"
+msgstr ""
+
+#: inc/template-tags.php:355
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:356
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:368
+msgid "Category"
+msgstr ""
+
+#: inc/template-tags.php:372
+msgid "Tag"
+msgstr ""
+
+#: inc/template-tags.php:376
+msgid "Personnel file"
+msgstr ""
+
+#: inc/template-tags.php:380
+msgid "Chronological index"
+msgstr ""
+
+#: inc/template-tags.php:392
+msgid "Collection"
+msgstr ""
+
+#: inc/template-tags.php:395
+msgid "Archive"
+msgstr ""
+
+#. translators: 1: Current year. 2: Site name.
+#: inc/template-tags.php:408
+#, php-format
+msgid "Content copyright &copy; %1$s %2$s"
+msgstr ""
+
+#: index.php:16
+msgid "Latest log entries"
+msgstr ""
+
+#: index.php:18
+msgid "Log entries"
+msgstr ""
+
+#. Template Name of the theme
+#: page-templates/template-full-width.php
+msgid "Full width (no sidebar)"
+msgstr ""
+
+#: patterns/button-panel.php
+msgctxt "Pattern description"
+msgid ""
+"A cluster of rectangular LCARS buttons with labels in the lower right corner."
+msgstr ""
+
+#: patterns/button-panel.php
+msgctxt "Pattern title"
+msgid "LCARS button panel"
+msgstr ""
+
+#: patterns/button-panel.php:15
+msgctxt "Pattern button"
+msgid "Logs"
+msgstr ""
+
+#: patterns/button-panel.php:19
+msgctxt "Pattern button"
+msgid "Projects"
+msgstr ""
+
+#: patterns/button-panel.php:23
+msgctxt "Pattern button"
+msgid "Gallery"
+msgstr ""
+
+#: patterns/button-panel.php:27 patterns/status-panel.php:28
+msgctxt "Pattern button"
+msgid "Contact"
+msgstr ""
+
+#: patterns/section-header.php
+msgctxt "Pattern description"
+msgid "A text-bar heading, an introduction and a segmented LCARS bar."
+msgstr ""
+
+#: patterns/section-header.php
+msgctxt "Pattern title"
+msgid "LCARS section header"
+msgstr ""
+
+#: patterns/section-header.php:14
+msgctxt "Pattern heading"
+msgid "Mission briefing"
+msgstr ""
+
+#: patterns/section-header.php:18
+msgctxt "Pattern text"
+msgid ""
+"Introduce the section here. Keep it short: a sentence or two on what follows."
+msgstr ""
+
+#: patterns/section-header.php:23
+msgctxt "Pattern list item"
+msgid "First objective"
+msgstr ""
+
+#: patterns/section-header.php:27
+msgctxt "Pattern list item"
+msgid "Second objective"
+msgstr ""
+
+#: patterns/section-header.php:31
+msgctxt "Pattern list item"
+msgid "Third objective"
+msgstr ""
+
+#: patterns/status-panel.php
+msgctxt "Pattern description"
+msgid ""
+"An elbow-framed panel with a text-bar heading, a short readout and buttons."
+msgstr ""
+
+#: patterns/status-panel.php
+msgctxt "Pattern title"
+msgid "LCARS status panel"
+msgstr ""
+
+#: patterns/status-panel.php:15
+msgctxt "Pattern heading"
+msgid "Station status"
+msgstr ""
+
+#: patterns/status-panel.php:19
+msgctxt "Pattern text"
+msgid ""
+"All systems are operating within normal parameters. Use this panel for a "
+"status update, an announcement or a short introduction."
+msgstr ""
+
+#: patterns/status-panel.php:24
+msgctxt "Pattern button"
+msgid "Details"
+msgstr ""
+
+#: search.php:14
+msgid "Library search"
+msgstr ""
+
+#. translators: %s: Search query.
+#: search.php:19
+#, php-format
+msgid "Results for: %s"
+msgstr ""
+
+#. translators: %s: Number of search results.
+#: search.php:30
+#, php-format
+msgid "%s record located"
+msgid_plural "%s records located"
+msgstr[0] ""
+msgstr[1] ""
+
+#: searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "placeholder"
+msgid "Search the library&hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: single.php:22
+msgid "Previous record"
+msgstr ""
+
+#: single.php:23
+msgid "Next record"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid ""
+"An LCARS-inspired WordPress theme for n0kmo.com, styled after the LCARS "
+"website templates at TheLCARS.com. It has elbow-framed header and content "
+"panels, segmented colour bars, an animated data cascade, LCARS button "
+"navigation, a side-panel menu, a live UTC clock with stardates, and four "
+"colour schemes (Classic, Nemesis Blue, Lower Decks and Red Alert). It also "
+"includes LCARS block styles and patterns for the block editor. Star Trek and "
+"LCARS are trademarks of CBS Studios Inc.; this is an unofficial fan work and "
+"is not affiliated with or endorsed by them."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "N0KMO"
+msgstr ""
+
+#. Theme Name of the theme
+#: style.css
+msgid "N0KMO LCARS"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://n0kmo.com/"
+msgstr ""
+
+#: template-parts/content-none.php:12
+msgid "No records found"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing here yet"
+msgstr ""
+
+#. translators: %s: Link to the new post screen.
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first log entry? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:33
+msgid "No records match those search terms. Try different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:36
+msgid "The library computer has no records here. A search may help."
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content-single.php:25
+msgid "Page"
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content-single.php:25
+msgid "Pages:"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "African Violet"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Almond Creme"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Antonio (LCARS)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Blue"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Bluey"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Butterscotch"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Golden Orange"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Honey"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ice"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Lilac"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Orange"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Peach"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Red"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sky"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Space White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sunflower"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System sans-serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tomato"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Violet Creme"
+msgstr ""

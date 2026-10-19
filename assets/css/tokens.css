@@ -1,0 +1,332 @@
+/**
+ * N0KMO LCARS — design tokens.
+ *
+ * Fonts, the LCARS colour palette, the colour-scheme roles and the frame
+ * dimensions. Loaded on the front end and in the block editor.
+ *
+ * @package N0KMO_LCARS
+ */
+
+/* Fonts ------------------------------------------------------------------- */
+
+/* Antonio, SIL Open Font License 1.1 (see assets/fonts/antonio/OFL.txt). */
+@font-face {
+	font-family: "Antonio";
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url("../fonts/antonio/antonio-latin-ext-wght-normal.woff2") format("woff2");
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+	font-family: "Antonio";
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url("../fonts/antonio/antonio-latin-wght-normal.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Palette and the Classic scheme ------------------------------------------ */
+
+:root {
+	/* LCARS colours, named as on TheLCARS.com. */
+	--lcars-african-violet: #cc88ff;
+	--lcars-almond: #ffaa90;
+	--lcars-almond-creme: #ffbbaa;
+	--lcars-blue: #5566ff;
+	--lcars-bluey: #8899ff;
+	--lcars-butterscotch: #ff9966;
+	--lcars-gold: #ffaa00;
+	--lcars-golden-orange: #ff9900;
+	--lcars-gray: #666688;
+	--lcars-green: #999933;
+	--lcars-honey: #ffcc99;
+	--lcars-ice: #99ccff;
+	--lcars-lilac: #cc55ff;
+	--lcars-magenta: #cc4499;
+	--lcars-mars: #ff2200;
+	--lcars-moonlit-violet: #9966ff;
+	--lcars-orange: #ff8800;
+	--lcars-peach: #ff8866;
+	--lcars-red: #cc4444;
+	--lcars-sky: #aaaaff;
+	--lcars-space-white: #f5f6fa;
+	--lcars-sunflower: #ffcc66;
+	--lcars-tomato: #ff5555;
+	--lcars-violet-creme: #ddbbff;
+
+	/* Surfaces and text. */
+	--lcars-bg: #000;
+	--lcars-on-color: #000;
+	--lcars-text: var(--lcars-space-white);
+	--lcars-muted: #a9abc8;
+
+	/*
+	 * Scheme roles. Each colour scheme only reassigns these.
+	 * The elbow colours must match their panel and first bar so the
+	 * curves join up.
+	 */
+	--lcars-panel-1: var(--lcars-golden-orange);
+	--lcars-elbow-top: var(--lcars-african-violet);
+	--lcars-bar-2: var(--lcars-butterscotch);
+	--lcars-bar-3: var(--lcars-almond-creme);
+	--lcars-bar-4: var(--lcars-bluey);
+	--lcars-bar-5: var(--lcars-golden-orange);
+
+	--lcars-elbow-main: var(--lcars-peach);
+	--lcars-bar-7: var(--lcars-golden-orange);
+	--lcars-bar-8: var(--lcars-sky);
+	--lcars-bar-9: var(--lcars-almond-creme);
+	--lcars-bar-10: var(--lcars-african-violet);
+
+	--lcars-panel-4: var(--lcars-golden-orange);
+	--lcars-panel-5: var(--lcars-bluey);
+	--lcars-panel-6: var(--lcars-honey);
+	--lcars-panel-7: var(--lcars-african-violet);
+	--lcars-panel-8: var(--lcars-butterscotch);
+	--lcars-panel-9: var(--lcars-sky);
+	--lcars-panel-10: var(--lcars-almond-creme);
+	--lcars-filler: var(--lcars-bluey);
+
+	--lcars-elbow-bottom: var(--lcars-golden-orange);
+	--lcars-bar-12: var(--lcars-bluey);
+	--lcars-bar-13: var(--lcars-butterscotch);
+	--lcars-bar-14: var(--lcars-african-violet);
+	--lcars-bar-15: var(--lcars-honey);
+
+	--lcars-button-1: var(--lcars-african-violet);
+	--lcars-button-2: var(--lcars-golden-orange);
+	--lcars-button-3: var(--lcars-bluey);
+	--lcars-button-4: var(--lcars-butterscotch);
+	--lcars-active: var(--lcars-space-white);
+
+	--lcars-banner: var(--lcars-golden-orange);
+	--lcars-h1: var(--lcars-golden-orange);
+	--lcars-h2: var(--lcars-african-violet);
+	--lcars-h3: var(--lcars-butterscotch);
+	--lcars-h4: var(--lcars-bluey);
+	--lcars-link: var(--lcars-ice);
+	--lcars-link-hover: var(--lcars-sunflower);
+	--lcars-focus: var(--lcars-space-white);
+
+	--lcars-accent-1: var(--lcars-golden-orange);
+	--lcars-accent-2: var(--lcars-african-violet);
+	--lcars-accent-3: var(--lcars-bluey);
+	--lcars-accent-4: var(--lcars-butterscotch);
+	--lcars-alert: var(--lcars-tomato);
+
+	--lcars-cascade-1: var(--lcars-bluey);
+	--lcars-cascade-2: var(--lcars-golden-orange);
+	--lcars-cascade-3: var(--lcars-space-white);
+	--lcars-cascade-4: var(--lcars-african-violet);
+
+	/* Type. */
+	--lcars-font: "Antonio", "Arial Narrow", "Avenir Next Condensed", "Roboto Condensed", sans-serif;
+	--lcars-font-readable: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--lcars-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+	/* Frame geometry. */
+	--lcars-frame-w: 170px;
+	--lcars-bar-h: 24px;
+	--lcars-gap: 6px;
+	--lcars-frame-gap: 8px;
+	--lcars-inner-r: 48px;
+	--lcars-outer-rx: 150px;
+	--lcars-outer-ry: 96px;
+	--lcars-pad: 1.5rem;
+	--lcars-content-w: 46rem;
+	--lcars-wide-w: 72rem;
+	--lcars-sidebar-w: 19rem;
+}
+
+@media (max-width: 1023px) {
+
+	:root {
+		--lcars-frame-w: 124px;
+		--lcars-bar-h: 20px;
+		--lcars-inner-r: 36px;
+		--lcars-outer-rx: 110px;
+		--lcars-outer-ry: 76px;
+		--lcars-pad: 1.25rem;
+	}
+}
+
+@media (max-width: 767px) {
+
+	:root {
+		--lcars-frame-w: 72px;
+		--lcars-bar-h: 14px;
+		--lcars-gap: 4px;
+		--lcars-frame-gap: 6px;
+		--lcars-inner-r: 24px;
+		--lcars-outer-rx: 64px;
+		--lcars-outer-ry: 48px;
+		--lcars-pad: 0.875rem;
+	}
+}
+
+/* Colour schemes ---------------------------------------------------------- */
+
+/* Nemesis Blue: cool blues and greys with an orange accent. */
+.lcars-scheme-nemesis-blue {
+	--lcars-panel-1: var(--lcars-golden-orange);
+	--lcars-elbow-top: var(--lcars-bluey);
+	--lcars-bar-2: var(--lcars-ice);
+	--lcars-bar-3: var(--lcars-gray);
+	--lcars-bar-4: var(--lcars-blue);
+	--lcars-bar-5: var(--lcars-sky);
+
+	--lcars-elbow-main: var(--lcars-ice);
+	--lcars-bar-7: var(--lcars-blue);
+	--lcars-bar-8: var(--lcars-golden-orange);
+	--lcars-bar-9: var(--lcars-gray);
+	--lcars-bar-10: var(--lcars-sky);
+
+	--lcars-panel-4: var(--lcars-sky);
+	--lcars-panel-5: var(--lcars-bluey);
+	--lcars-panel-6: var(--lcars-ice);
+	--lcars-panel-7: var(--lcars-violet-creme);
+	--lcars-panel-8: var(--lcars-golden-orange);
+	--lcars-panel-9: var(--lcars-bluey);
+	--lcars-panel-10: var(--lcars-blue);
+	--lcars-filler: var(--lcars-gray);
+
+	--lcars-elbow-bottom: var(--lcars-sky);
+	--lcars-bar-12: var(--lcars-blue);
+	--lcars-bar-13: var(--lcars-ice);
+	--lcars-bar-14: var(--lcars-golden-orange);
+	--lcars-bar-15: var(--lcars-gray);
+
+	--lcars-button-1: var(--lcars-ice);
+	--lcars-button-2: var(--lcars-bluey);
+	--lcars-button-3: var(--lcars-sky);
+	--lcars-button-4: var(--lcars-golden-orange);
+
+	--lcars-banner: var(--lcars-ice);
+	--lcars-h1: var(--lcars-ice);
+	--lcars-h2: var(--lcars-bluey);
+	--lcars-h3: var(--lcars-sky);
+	--lcars-h4: var(--lcars-golden-orange);
+	--lcars-link: var(--lcars-sunflower);
+	--lcars-link-hover: var(--lcars-ice);
+
+	--lcars-accent-1: var(--lcars-bluey);
+	--lcars-accent-2: var(--lcars-ice);
+	--lcars-accent-3: var(--lcars-sky);
+	--lcars-accent-4: var(--lcars-golden-orange);
+
+	--lcars-cascade-1: var(--lcars-ice);
+	--lcars-cascade-2: var(--lcars-bluey);
+	--lcars-cascade-3: var(--lcars-space-white);
+	--lcars-cascade-4: var(--lcars-golden-orange);
+}
+
+/* Lower Decks: warm oranges and yellows with violet. */
+.lcars-scheme-lower-decks {
+	--lcars-panel-1: var(--lcars-sunflower);
+	--lcars-elbow-top: var(--lcars-orange);
+	--lcars-bar-2: var(--lcars-sunflower);
+	--lcars-bar-3: var(--lcars-tomato);
+	--lcars-bar-4: var(--lcars-african-violet);
+	--lcars-bar-5: var(--lcars-gold);
+
+	--lcars-elbow-main: var(--lcars-gold);
+	--lcars-bar-7: var(--lcars-orange);
+	--lcars-bar-8: var(--lcars-african-violet);
+	--lcars-bar-9: var(--lcars-peach);
+	--lcars-bar-10: var(--lcars-sunflower);
+
+	--lcars-panel-4: var(--lcars-orange);
+	--lcars-panel-5: var(--lcars-sunflower);
+	--lcars-panel-6: var(--lcars-peach);
+	--lcars-panel-7: var(--lcars-african-violet);
+	--lcars-panel-8: var(--lcars-gold);
+	--lcars-panel-9: var(--lcars-almond-creme);
+	--lcars-panel-10: var(--lcars-butterscotch);
+	--lcars-filler: var(--lcars-african-violet);
+
+	--lcars-elbow-bottom: var(--lcars-orange);
+	--lcars-bar-12: var(--lcars-sunflower);
+	--lcars-bar-13: var(--lcars-african-violet);
+	--lcars-bar-14: var(--lcars-tomato);
+	--lcars-bar-15: var(--lcars-gold);
+
+	--lcars-button-1: var(--lcars-orange);
+	--lcars-button-2: var(--lcars-sunflower);
+	--lcars-button-3: var(--lcars-african-violet);
+	--lcars-button-4: var(--lcars-peach);
+
+	--lcars-banner: var(--lcars-sunflower);
+	--lcars-h1: var(--lcars-orange);
+	--lcars-h2: var(--lcars-sunflower);
+	--lcars-h3: var(--lcars-african-violet);
+	--lcars-h4: var(--lcars-peach);
+	--lcars-link: var(--lcars-sky);
+	--lcars-link-hover: var(--lcars-sunflower);
+
+	--lcars-accent-1: var(--lcars-orange);
+	--lcars-accent-2: var(--lcars-sunflower);
+	--lcars-accent-3: var(--lcars-african-violet);
+	--lcars-accent-4: var(--lcars-peach);
+
+	--lcars-cascade-1: var(--lcars-sunflower);
+	--lcars-cascade-2: var(--lcars-orange);
+	--lcars-cascade-3: var(--lcars-space-white);
+	--lcars-cascade-4: var(--lcars-tomato);
+}
+
+/* Red Alert: reds throughout, with a slow pulse on a few panels. */
+.lcars-scheme-red-alert {
+	--lcars-panel-1: var(--lcars-tomato);
+	--lcars-elbow-top: var(--lcars-red);
+	--lcars-bar-2: var(--lcars-mars);
+	--lcars-bar-3: var(--lcars-almond-creme);
+	--lcars-bar-4: var(--lcars-tomato);
+	--lcars-bar-5: var(--lcars-gray);
+
+	--lcars-elbow-main: var(--lcars-tomato);
+	--lcars-bar-7: var(--lcars-red);
+	--lcars-bar-8: var(--lcars-almond-creme);
+	--lcars-bar-9: var(--lcars-mars);
+	--lcars-bar-10: var(--lcars-gray);
+
+	--lcars-panel-4: var(--lcars-tomato);
+	--lcars-panel-5: var(--lcars-almond-creme);
+	--lcars-panel-6: var(--lcars-peach);
+	--lcars-panel-7: var(--lcars-tomato);
+	--lcars-panel-8: var(--lcars-almond);
+	--lcars-panel-9: var(--lcars-almond-creme);
+	--lcars-panel-10: var(--lcars-red);
+	--lcars-filler: var(--lcars-gray);
+
+	--lcars-elbow-bottom: var(--lcars-tomato);
+	--lcars-bar-12: var(--lcars-mars);
+	--lcars-bar-13: var(--lcars-almond-creme);
+	--lcars-bar-14: var(--lcars-red);
+	--lcars-bar-15: var(--lcars-gray);
+
+	--lcars-button-1: var(--lcars-tomato);
+	--lcars-button-2: var(--lcars-almond-creme);
+	--lcars-button-3: var(--lcars-peach);
+	--lcars-button-4: var(--lcars-almond);
+
+	--lcars-banner: var(--lcars-tomato);
+	--lcars-h1: var(--lcars-tomato);
+	--lcars-h2: var(--lcars-almond-creme);
+	--lcars-h3: var(--lcars-peach);
+	--lcars-h4: var(--lcars-space-white);
+	--lcars-link: var(--lcars-sunflower);
+	--lcars-link-hover: var(--lcars-space-white);
+
+	--lcars-accent-1: var(--lcars-tomato);
+	--lcars-accent-2: var(--lcars-almond-creme);
+	--lcars-accent-3: var(--lcars-peach);
+	--lcars-accent-4: var(--lcars-almond);
+
+	--lcars-cascade-1: var(--lcars-tomato);
+	--lcars-cascade-2: var(--lcars-almond-creme);
+	--lcars-cascade-3: var(--lcars-space-white);
+	--lcars-cascade-4: var(--lcars-mars);
+}
