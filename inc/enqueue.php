@@ -18,9 +18,15 @@ function n0kmo_lcars_scripts() {
 	wp_enqueue_style( 'n0kmo-lcars-tokens', $uri . '/assets/css/tokens.css', array(), N0KMO_LCARS_VERSION );
 	wp_enqueue_style( 'n0kmo-lcars', $uri . '/assets/css/lcars.css', array( 'n0kmo-lcars-tokens' ), N0KMO_LCARS_VERSION );
 	wp_enqueue_style( 'n0kmo-lcars-content', $uri . '/assets/css/content.css', array( 'n0kmo-lcars' ), N0KMO_LCARS_VERSION );
+	$last_style = 'n0kmo-lcars-content';
+
+	if ( n0kmo_lcars_elementor_active() ) {
+		wp_enqueue_style( 'n0kmo-lcars-elementor', $uri . '/assets/css/elementor.css', array( $last_style ), N0KMO_LCARS_VERSION );
+		$last_style = 'n0kmo-lcars-elementor';
+	}
 
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'n0kmo-lcars-child', get_stylesheet_uri(), array( 'n0kmo-lcars-content' ), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'n0kmo-lcars-child', get_stylesheet_uri(), array( $last_style ), wp_get_theme()->get( 'Version' ) );
 	}
 
 	wp_enqueue_script(

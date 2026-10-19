@@ -200,6 +200,22 @@ function n0kmo_lcars_side_panels() {
 }
 
 /**
+ * Whether to show the entry header (text bar and title) on a single view.
+ *
+ * Elementor's "Hide Title" page setting turns it off (see inc/elementor.php).
+ *
+ * @return bool
+ */
+function n0kmo_lcars_show_entry_header() {
+	/**
+	 * Filters whether the entry header is shown on single posts and pages.
+	 *
+	 * @param bool $show Whether to show the entry header.
+	 */
+	return (bool) apply_filters( 'n0kmo_lcars_show_entry_header', true );
+}
+
+/**
  * Print the text-bar label above a post or page title.
  */
 function n0kmo_lcars_record_label() {

@@ -8,11 +8,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'lcars-record lcars-record--single' ); ?>>
-	<header class="entry-header">
-		<p class="lcars-text-bar"><?php n0kmo_lcars_record_label(); ?></p>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php n0kmo_lcars_entry_meta(); ?>
-	</header>
+	<?php if ( n0kmo_lcars_show_entry_header() ) : ?>
+		<header class="entry-header">
+			<p class="lcars-text-bar"><?php n0kmo_lcars_record_label(); ?></p>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php n0kmo_lcars_entry_meta(); ?>
+		</header>
+	<?php endif; ?>
 
 	<?php n0kmo_lcars_post_thumbnail(); ?>
 

@@ -15,6 +15,7 @@ An LCARS-inspired WordPress theme for [n0kmo.com](https://n0kmo.com/), styled af
 - **Four colour schemes**: Classic, Nemesis Blue, Lower Decks and Red Alert.
 - **Optional chirps**: LCARS button sounds synthesised with the Web Audio API, so there are no audio files. Off by default.
 - **Block editor support**: editor styles, an LCARS colour palette in `theme.json`, five block styles and three patterns.
+- **Elementor support**: the Canvas and Full Width templates, Hide Title, full-width layouts, and the Elementor Pro Theme Builder header, footer, single and archive locations. See [Elementor](#elementor).
 - **The usual theme parts**: sidebar and footer widget areas, threaded comments, a full-width template, a custom logo, a translation template, and print and forced-colours styles.
 
 ## Installation
@@ -47,6 +48,28 @@ The theme requires WordPress 6.2 or later and PHP 7.4 or later.
 
 The **LCARS** pattern category has a status panel, a button panel and a section header.
 
+## Elementor
+
+The theme works with Elementor and Elementor Pro. None of this code runs unless Elementor is active.
+
+| Elementor feature | What happens |
+| --- | --- |
+| **Elementor Canvas** template | A blank page in the theme's colours and font, without the LCARS frame. |
+| **Elementor Full Width** template | The LCARS frame, header and footer stay; the layout gets the whole content area and the sidebar is hidden. |
+| Default page template | Elementor layouts use the full content width rather than the 736px reading width. The sidebar stays. |
+| **Hide Title** page setting | Hides the text bar and the title. |
+| Theme Builder (Pro) | The header, footer, single and archive locations are registered. A header template replaces the LCARS top frame, and a footer template replaces the theme footer inside the frame. Single and archive templates replace the content area and hide the sidebar. |
+| Stretched sections | They stretch to the content area instead of the window, so they don't cover the side column. |
+| Default colours and fonts | On theme activation, Elementor's default colours and fonts are switched off, unless you already set them, so widgets inherit the LCARS colours and Antonio. You can switch them back on in Elementor's settings. Buttons get the LCARS accent colour unless you style them in Site Settings or in the widget. |
+
+To give Elementor elements an LCARS look, add a class under **Advanced → CSS Classes**:
+
+| Class | Use on | Looks like |
+| --- | --- | --- |
+| `lcars-heading-bar` | Heading | The heading set into a rounded bar |
+| `lcars-panel-button` | Button | Rectangular button with the label in the lower right corner |
+| `lcars-frame` | Container, Section or Column | Content wrapped in an elbow bracket |
+
 ## How it is built
 
 This is a classic PHP theme. The markup follows the structure and class names of the TheLCARS.com templates (`wrap`, `left-frame-top`, `right-frame-top`, `panel-1`, `banner`, `data-cascade-wrapper`, `bar-panel`, `left-frame`, `right-frame`, `#topBtn`, `hop`). The CSS and JavaScript are an original implementation; no files from TheLCARS.com are included.
@@ -63,10 +86,12 @@ inc/template-functions.php     Body classes, excerpt and menu fallback hooks
 inc/template-tags.php          Stardate, data cascade, panels, entry meta, etc.
 inc/customizer.php             LCARS Interface section and selective refresh
 inc/block-editor.php           Block styles and the pattern category
+inc/elementor.php              Elementor and Elementor Pro compatibility
 assets/css/tokens.css          Palette, scheme roles, fonts, frame sizes
 assets/css/lcars.css           Frame, navigation, forms, posts, comments, widgets
 assets/css/content.css         Typography and block styles (front end and editor)
 assets/css/editor.css          Editor-only adjustments
+assets/css/elementor.css       Elementor layout fixes and helper classes
 assets/js/lcars.js             Clock, stardate, menu toggle, chirps
 patterns/                      Block patterns (registered automatically)
 template-parts/                Post, page, search and empty-state partials
@@ -78,7 +103,7 @@ languages/n0kmo-lcars.pot      Translation template
 
 - **Colours**: each scheme in `assets/css/tokens.css` only reassigns role variables (`--lcars-panel-1`, `--lcars-elbow-top`, `--lcars-accent-1`, and so on). To make your own scheme, override those variables in a child theme.
 - **Frame size**: `--lcars-frame-w`, `--lcars-bar-h`, `--lcars-inner-r` and `--lcars-outer-rx`/`--lcars-outer-ry` control the column width, bar height and elbow curves, with smaller values set for tablets and phones.
-- **Filters**: `n0kmo_lcars_has_sidebar` (bool) and `n0kmo_lcars_content_width` (int, default 736).
+- **Filters**: `n0kmo_lcars_has_sidebar` (bool), `n0kmo_lcars_show_entry_header` (bool) and `n0kmo_lcars_content_width` (int, default 736).
 - **Child themes**: a child theme's `style.css` loads after the theme's styles.
 
 ## Development

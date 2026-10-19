@@ -717,8 +717,17 @@ a.panel-1:hover {
 	z-index: 1;
 }
 
+/* The bottom bar panel reserves the height of its inner curve, so whatever
+   sits above it (the theme footer or an Elementor footer) never runs under
+   the curve. */
 .last-bar-panel {
+	align-items: flex-end;
+	height: calc(var(--lcars-bar-h) + var(--lcars-inner-r));
 	margin-top: auto;
+}
+
+.last-bar-panel > div {
+	height: var(--lcars-bar-h);
 }
 
 .last-bar-panel::before {
@@ -1532,7 +1541,7 @@ a.page-numbers:hover,
 /* Footer ------------------------------------------------------------------ */
 
 .site-footer {
-	padding: 2rem var(--lcars-pad) calc(var(--lcars-inner-r) + 1rem) calc(var(--lcars-pad) + 0.5rem);
+	padding: 2rem var(--lcars-pad) 1rem calc(var(--lcars-pad) + 0.5rem);
 	color: var(--lcars-muted);
 	font-size: 1rem;
 }
