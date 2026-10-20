@@ -1,0 +1,66 @@
+# Builds the installable theme zip and publishes it as a GitHub release.
+#
+# Runs when a version tag such as v1.2.0 is pushed, or by hand from the
+# Actions tab (Run workflow), which tags the chosen commit itself. Either way
+# the release is named after the Version in style.css, and a pushed tag must
+# match it. The release notes are that version's entry in the readme.txt
+# changelog.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Read the theme version
+        run: |
+          version="$(sed -n 's/^Version: *//p' style.css | head -n 1 | tr -d '\r')"
+          if [ -z "${version}" ]; then
+            echo "::error::No Version found in style.css"
+            exit 1
+          fi
+          if [ "${GITHUB_REF_TYPE}" = "tag" ] && [ "${GITHUB_REF_NAME}" != "v${version}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match style.css Version ${version}"
+            exit 1
+          fi
+          echo "VERSION=${version}" >> "${GITHUB_ENV}"
+          echo "TAG=v${version}" >> "${GITHUB_ENV}"
+
+      - name: Build the theme zip
+        run: bin/build-zip.sh HEAD
+
+      - name: Write the release notes
+        run: |
+          awk -v heading="= ${VERSION} =" '
+            $0 == heading { found = 1; next }
+            found && (/^= / || /^== /) { exit }
+            found { print }
+          ' readme.txt > notes.md
+          if [ ! -s notes.md ]; then
+            echo "::error::No changelog entry for ${VERSION} in readme.txt"
+            exit 1
+          fi
+          {
+            echo
+            echo "**Install:** download \`n0kmo-lcars-${VERSION}.zip\` below, then upload it in WordPress under Appearance > Themes > Add New > Upload Theme."
+          } >> notes.md
+          cat notes.md
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${TAG}" "dist/n0kmo-lcars-${VERSION}.zip" \
+            --target "${GITHUB_SHA}" \
+            --title "N0KMO LCARS ${VERSION}" \
+            --notes-file notes.md

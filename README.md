@@ -111,6 +111,7 @@ languages/n0kmo-lcars.pot      Translation template
 ## Development
 
 - `bin/build-zip.sh [ref]` writes `dist/n0kmo-lcars-<version>.zip` from committed files.
+- **Releases**: bump `Version` in `style.css` (and `N0KMO_LCARS_VERSION` in `functions.php`), add a changelog entry to `readme.txt`, then push a matching tag such as `v1.2.0` or run the **Release** workflow from the Actions tab. `.github/workflows/release.yml` builds the zip and publishes a GitHub release with it attached, using the changelog entry as the release notes.
 - Regenerate the translation template with WP-CLI: `wp i18n make-pot . languages/n0kmo-lcars.pot`.
 - The theme has no build step. Edit the CSS and JS directly.
 

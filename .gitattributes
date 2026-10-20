@@ -1,6 +1,7 @@
 # Keep development files out of `git archive` and GitHub's zip downloads, so
 # those archives can be uploaded to WordPress as-is.
 /.gitattributes export-ignore
+/.github export-ignore
 /.gitignore export-ignore
 /bin export-ignore
 /README.md export-ignore
