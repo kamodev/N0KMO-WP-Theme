@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'N0KMO_LCARS_VERSION', '1.1.0' );
+define( 'N0KMO_LCARS_VERSION', '1.2.0' );
 
 require get_template_directory() . '/inc/options.php';
 require get_template_directory() . '/inc/setup.php';

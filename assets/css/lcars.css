@@ -394,11 +394,11 @@ a.panel-1:hover {
 	list-style: none;
 }
 
-.lcars-nav-buttons:has(> li:nth-child(5)) {
+.lcars-nav-buttons:has(> li:nth-of-type(5)) {
 	grid-template-columns: repeat(3, minmax(6.5rem, 9rem));
 }
 
-.lcars-nav-buttons:has(> li:nth-child(7)) {
+.lcars-nav-buttons:has(> li:nth-of-type(7)) {
 	grid-template-columns: repeat(4, minmax(6.5rem, 8.5rem));
 }
 
@@ -420,15 +420,15 @@ a.panel-1:hover {
 	transition: filter 0.15s ease, background-color 0.15s ease;
 }
 
-.lcars-nav-buttons > li:nth-child(4n + 2) > a {
+.lcars-nav-buttons > li:nth-of-type(4n + 2) > a {
 	--lcars-nav-color: var(--lcars-button-2);
 }
 
-.lcars-nav-buttons > li:nth-child(4n + 3) > a {
+.lcars-nav-buttons > li:nth-of-type(4n + 3) > a {
 	--lcars-nav-color: var(--lcars-button-3);
 }
 
-.lcars-nav-buttons > li:nth-child(4n + 4) > a {
+.lcars-nav-buttons > li:nth-of-type(4n + 4) > a {
 	--lcars-nav-color: var(--lcars-button-4);
 }
 
@@ -659,23 +659,23 @@ a.panel-1:hover {
 	font-size: 0.92rem;
 }
 
-.lcars-side-panels > li:nth-child(6n + 2) > a {
+.lcars-side-panels > li:nth-of-type(6n + 2) > a {
 	--lcars-side-color: var(--lcars-panel-5);
 }
 
-.lcars-side-panels > li:nth-child(6n + 3) > a {
+.lcars-side-panels > li:nth-of-type(6n + 3) > a {
 	--lcars-side-color: var(--lcars-panel-6);
 }
 
-.lcars-side-panels > li:nth-child(6n + 4) > a {
+.lcars-side-panels > li:nth-of-type(6n + 4) > a {
 	--lcars-side-color: var(--lcars-panel-7);
 }
 
-.lcars-side-panels > li:nth-child(6n + 5) > a {
+.lcars-side-panels > li:nth-of-type(6n + 5) > a {
 	--lcars-side-color: var(--lcars-panel-8);
 }
 
-.lcars-side-panels > li:nth-child(6n + 6) > a {
+.lcars-side-panels > li:nth-of-type(6n + 6) > a {
 	--lcars-side-color: var(--lcars-panel-9);
 }
 
@@ -1463,11 +1463,11 @@ a.page-numbers:hover,
 	border-radius: 0 0.55em 0.55em 0;
 }
 
-.widget:nth-child(3n + 2) :is(.widget-title, h2, .wp-block-heading) {
+.widget:nth-of-type(3n + 2) :is(.widget-title, h2, .wp-block-heading) {
 	--lcars-bar-color: var(--lcars-accent-3);
 }
 
-.widget:nth-child(3n + 3) :is(.widget-title, h2, .wp-block-heading) {
+.widget:nth-of-type(3n + 3) :is(.widget-title, h2, .wp-block-heading) {
 	--lcars-bar-color: var(--lcars-accent-4);
 }
 
@@ -1576,7 +1576,7 @@ a.page-numbers:hover,
 	text-transform: uppercase;
 }
 
-.footer-menu li:nth-child(odd) a {
+.footer-menu li:nth-of-type(odd) a {
 	background: var(--lcars-accent-4);
 }
 
@@ -1665,8 +1665,8 @@ a.page-numbers:hover,
 		font-size: 1.35rem;
 	}
 
-	.lcars-nav-buttons:has(> li:nth-child(5)),
-	.lcars-nav-buttons:has(> li:nth-child(7)) {
+	.lcars-nav-buttons:has(> li:nth-of-type(5)),
+	.lcars-nav-buttons:has(> li:nth-of-type(7)) {
 		grid-template-columns: repeat(3, minmax(6rem, 8rem));
 	}
 
@@ -1749,8 +1749,8 @@ a.page-numbers:hover,
 	}
 
 	.lcars-nav-buttons,
-	.lcars-nav-buttons:has(> li:nth-child(5)),
-	.lcars-nav-buttons:has(> li:nth-child(7)) {
+	.lcars-nav-buttons:has(> li:nth-of-type(5)),
+	.lcars-nav-buttons:has(> li:nth-of-type(7)) {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		width: 100%;
 	}
@@ -1840,6 +1840,135 @@ a.page-numbers:hover,
 
 	.post-navigation .nav-next {
 		grid-column: 1;
+	}
+}
+
+/* Frame on the right ------------------------------------------------------
+ * The "Frame side" Customizer option adds .lcars-frame-right to <body> and
+ * mirrors the frame: the side column, elbows, inner curves and bars move to
+ * the right, and panel labels, the banner and the header buttons flip with
+ * them. Content inside the frame still reads left to right, and the sidebar
+ * widget area moves to the left, away from the frame.
+ */
+
+.lcars-frame-right .wrap,
+.lcars-frame-right .bar-panel,
+.lcars-frame-right .data-cascade-button-group {
+	flex-direction: row-reverse;
+}
+
+.lcars-frame-right :is(.panel-1, .panel-2, .panel-3, .lcars-panel, .lcars-side-panels a, #topBtn) {
+	align-items: flex-start;
+	text-align: left;
+}
+
+.lcars-frame-right .lcars-nav-buttons a {
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.lcars-frame-right .panel-2 {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: var(--lcars-outer-rx) var(--lcars-outer-ry);
+}
+
+.lcars-frame-right .panel-3 {
+	border-top-left-radius: 0;
+	border-top-right-radius: var(--lcars-outer-rx) var(--lcars-outer-ry);
+}
+
+.lcars-frame-right #topBtn {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: var(--lcars-outer-rx) var(--lcars-outer-ry);
+}
+
+.lcars-frame-right :is(.right-frame-top, .right-frame, .last-bar-panel)::before,
+.lcars-frame-right :is(.right-frame-top, .right-frame, .last-bar-panel)::after {
+	right: 0;
+	left: auto;
+}
+
+.lcars-frame-right .right-frame-top::after {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: var(--lcars-inner-r);
+}
+
+.lcars-frame-right .right-frame::after {
+	border-top-left-radius: 0;
+	border-top-right-radius: var(--lcars-inner-r);
+}
+
+.lcars-frame-right .last-bar-panel::after {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: var(--lcars-inner-r);
+}
+
+.lcars-frame-right .banner {
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	padding: 0 calc(var(--lcars-inner-r) * 0.5 + 1rem) 0.5rem 0;
+	text-align: left;
+}
+
+.lcars-frame-right .data-cascade-button-group {
+	padding-right: calc(var(--lcars-inner-r) * 0.5 + 0.75rem);
+	padding-left: 0;
+}
+
+.lcars-frame-right .lcars-side-panels .sub-menu {
+	padding-right: 0.75rem;
+	padding-left: 0;
+}
+
+.lcars-frame-right .site-content,
+.lcars-frame-right .site-footer {
+	padding-right: calc(var(--lcars-pad) + 0.5rem);
+	padding-left: var(--lcars-pad);
+}
+
+@media (min-width: 1100px) {
+
+	.lcars-frame-right.has-sidebar .site-content {
+		grid-template-columns: var(--lcars-sidebar-w) minmax(0, 1fr);
+	}
+
+	.lcars-frame-right.has-sidebar .site-content > .site-main {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	.lcars-frame-right.has-sidebar .site-content > .widget-area {
+		grid-row: 1;
+		grid-column: 1;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.lcars-frame-right .banner {
+		padding: 0 0.75rem 0.25rem 0;
+	}
+
+	.lcars-frame-right .data-cascade-button-group {
+		flex-direction: column;
+		padding-right: 0.75rem;
+	}
+
+	.lcars-frame-right .main-navigation {
+		align-items: flex-start;
+	}
+
+	.js .lcars-frame-right .menu-toggle {
+		justify-content: flex-start;
+	}
+
+	.lcars-frame-right .lcars-side-panels .sub-menu {
+		padding-right: 0.4rem;
+	}
+
+	.lcars-frame-right .site-content,
+	.lcars-frame-right .site-footer {
+		padding-right: var(--lcars-pad);
 	}
 }
 

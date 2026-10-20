@@ -35,6 +35,7 @@ function n0kmo_lcars_has_sidebar() {
  */
 function n0kmo_lcars_body_classes( $classes ) {
 	$classes[] = 'lcars-scheme-' . sanitize_html_class( n0kmo_lcars_option( 'color_scheme' ) );
+	$classes[] = 'lcars-frame-' . sanitize_html_class( n0kmo_lcars_option( 'frame_side' ) );
 	$classes[] = n0kmo_lcars_has_sidebar() ? 'has-sidebar' : 'no-sidebar';
 
 	if ( n0kmo_lcars_option( 'readable_font' ) ) {

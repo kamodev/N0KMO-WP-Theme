@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function n0kmo_lcars_option_defaults() {
 	return array(
 		'color_scheme'  => 'classic',
+		'frame_side'    => 'left',
 		'panel_label'   => 'LCARS',
 		'banner_text'   => '',
 		'show_cascade'  => true,
@@ -48,6 +49,18 @@ function n0kmo_lcars_color_schemes() {
 }
 
 /**
+ * Sides the LCARS frame can sit on.
+ *
+ * @return array<string, string> Side slug => label.
+ */
+function n0kmo_lcars_frame_sides() {
+	return array(
+		'left'  => __( 'Left', 'n0kmo-lcars' ),
+		'right' => __( 'Right', 'n0kmo-lcars' ),
+	);
+}
+
+/**
  * Read a theme option, falling back to its default.
  *
  * @param string $key Option key without the n0kmo_lcars_ prefix.
@@ -59,6 +72,10 @@ function n0kmo_lcars_option( $key ) {
 	$value    = get_theme_mod( 'n0kmo_lcars_' . $key, $default );
 
 	if ( 'color_scheme' === $key && ! ( is_string( $value ) && array_key_exists( $value, n0kmo_lcars_color_schemes() ) ) ) {
+		return $default;
+	}
+
+	if ( 'frame_side' === $key && ! ( is_string( $value ) && array_key_exists( $value, n0kmo_lcars_frame_sides() ) ) ) {
 		return $default;
 	}
 

@@ -15,7 +15,8 @@ N0KMO LCARS gives a WordPress site the look of a Starfleet LCARS console:
 * Elbow-framed header and content panels with segmented colour bars.
 * An animated data cascade in the header. It stops for visitors who prefer reduced motion.
 * Header navigation as rectangular LCARS buttons, with a toggle on small screens.
-* A "Side panels" menu shown as the column of panels down the left of the page.
+* A "Side frame panels" menu shown as the column of panels in the page frame, alongside the header buttons.
+* The frame can sit on the left or the right of the page, mirrored with the same look.
 * A live UTC clock and TNG-style stardates in the header and on posts.
 * Four colour schemes: Classic, Nemesis Blue, Lower Decks and Red Alert.
 * A slashed zero in the banner, so a callsign such as N0KMO does not read as NOKMO.
@@ -30,14 +31,18 @@ Star Trek and LCARS are trademarks of CBS Studios Inc. This theme is an unoffici
 
 1. In the WordPress admin, go to Appearance > Themes > Add New > Upload Theme.
 2. Upload the theme zip and activate it.
-3. Go to Appearance > Menus and assign menus to "Header buttons", "Side panels" and "Footer".
+3. Go to Appearance > Menus and assign menus to "Header buttons", "Side frame panels" and "Footer".
 4. Go to Appearance > Customize > LCARS Interface to choose a colour scheme and the header readouts.
 
 == Frequently Asked Questions ==
 
 = How many header buttons fit? =
 
-The header shows top-level items only. On wide screens, up to four items sit in two columns, five or six in three columns and seven or more in four columns; tablets use at most three columns and phones two. Put deeper navigation in the "Side panels" menu, which shows one level of sub-items.
+The header shows top-level items only. On wide screens, up to four items sit in two columns, five or six in three columns and seven or more in four columns; tablets use at most three columns and phones two. Put deeper navigation in the "Side frame panels" menu, which shows one level of sub-items.
+
+= Can the frame go on the right? =
+
+Yes. Under Appearance > Customize > LCARS Interface, set "Frame side" to Right. The frame column, its elbows, the bars and the side panel menu move to the right, and the panel labels, banner and header buttons flip with them. The sidebar widget area moves to the left. Content still reads left to right.
 
 = What if no menus are assigned? =
 
@@ -64,6 +69,11 @@ Yes, with Elementor and Elementor Pro:
 Yes. Each one has a checkbox under Appearance > Customize > LCARS Interface. Sounds are off by default.
 
 == Changelog ==
+
+= 1.2.0 =
+* New "Frame side" option: the LCARS frame, its elbows and the side panel menu can sit on the left or the right of the page.
+* The "Side panels" menu location is now labelled "Side frame panels". Menus already assigned to it stay assigned.
+* Menu colours and column counts no longer shift in the Customizer preview.
 
 = 1.1.0 =
 * Elementor and Elementor Pro support: Theme Builder header, footer, single and archive locations; Canvas and Full Width templates; Hide Title; full-width Elementor layouts; stretched sections kept inside the frame; LCARS defaults for Elementor buttons; lcars-heading-bar, lcars-panel-button and lcars-frame helper classes.
