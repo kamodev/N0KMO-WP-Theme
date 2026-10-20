@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: N0KMO LCARS 1.1.0\n"
+"Project-Id-Version: N0KMO LCARS 1.2.0\n"
 "Report-Msgid-Bugs-To: https://n0kmo.com/\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T00:00:00+00:00\n"
+"POT-Creation-Date: 2026-10-20T00:00:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Domain: n0kmo-lcars\n"
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:28 inc/customizer.php:209 inc/template-functions.php:130
+#: header.php:28 inc/customizer.php:237 inc/template-functions.php:131
 msgid "Home"
 msgstr ""
 
@@ -125,75 +125,93 @@ msgstr ""
 msgid "Colour scheme"
 msgstr ""
 
-#: inc/customizer.php:51
+#: inc/customizer.php:59
+msgid "Frame side"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid ""
+"Which side of the page the frame column, its elbows and the side panel menu "
+"sit on. The whole frame is mirrored."
+msgstr ""
+
+#: inc/customizer.php:69
 msgid "Corner panel label"
 msgstr ""
 
-#: inc/customizer.php:52
+#: inc/customizer.php:70
 msgid "Text on the top-left panel, which links to the home page."
 msgstr ""
 
-#: inc/customizer.php:55
+#: inc/customizer.php:73
 msgid "Banner text"
 msgstr ""
 
-#: inc/customizer.php:56
+#: inc/customizer.php:74
 msgid "Large header text. Leave empty to use the site title."
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:100
 msgid "Show the animated data cascade in the header"
 msgstr ""
 
-#: inc/customizer.php:83
+#: inc/customizer.php:101
 msgid "Show a live UTC clock in the header"
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:102
 msgid "Show stardates in the header and on posts"
 msgstr ""
 
-#: inc/customizer.php:85
+#: inc/customizer.php:103
 msgid ""
 "Slash zeros in the banner, so a callsign like N0KMO does not read as NOKMO"
 msgstr ""
 
-#: inc/customizer.php:86
+#: inc/customizer.php:104
 msgid "Play LCARS chirps when buttons are pressed"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:105
 msgid "Use a standard sans-serif font for long-form text"
 msgstr ""
 
-#: inc/customizer.php:88
+#: inc/customizer.php:106
 msgid "Show the theme credit in the footer"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:138
 msgid "Footer copyright text"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:139
 msgid ""
 "Basic HTML is allowed; {year} becomes the current year. Leave empty for the "
 "default."
 msgstr ""
 
-#: inc/options.php:43
+#: inc/options.php:44
 msgid "Classic"
 msgstr ""
 
-#: inc/options.php:44
+#: inc/options.php:45
 msgid "Nemesis Blue"
 msgstr ""
 
-#: inc/options.php:45
+#: inc/options.php:46
 msgid "Lower Decks"
 msgstr ""
 
-#: inc/options.php:46
+#: inc/options.php:47
 msgid "Red Alert"
+msgstr ""
+
+#: inc/options.php:58
+msgid "Left"
+msgstr ""
+
+#: inc/options.php:59
+msgid "Right"
 msgstr ""
 
 #: inc/setup.php:25
@@ -201,7 +219,7 @@ msgid "Header buttons"
 msgstr ""
 
 #: inc/setup.php:26
-msgid "Side panels"
+msgid "Side frame panels"
 msgstr ""
 
 #: inc/setup.php:27 inc/setup.php:106
@@ -222,7 +240,7 @@ msgid "Shown in columns above the footer credits."
 msgstr ""
 
 #. translators: %s: Post title. Only visible to screen readers.
-#: inc/template-functions.php:85
+#: inc/template-functions.php:86
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> %s</span>"
 msgstr ""
@@ -488,12 +506,13 @@ msgid ""
 "An LCARS-inspired WordPress theme for n0kmo.com, styled after the LCARS "
 "website templates at TheLCARS.com. It has elbow-framed header and content "
 "panels, segmented colour bars, an animated data cascade, LCARS button "
-"navigation, a side-panel menu, a live UTC clock with stardates, and four "
-"colour schemes (Classic, Nemesis Blue, Lower Decks and Red Alert). It also "
-"includes LCARS block styles and patterns for the block editor, and works "
-"with Elementor and the Elementor Pro Theme Builder. Star Trek and LCARS are "
-"trademarks of CBS Studios Inc.; this is an unofficial fan work and is not "
-"affiliated with or endorsed by them."
+"navigation, a side-panel menu in the page frame, a frame that can sit on the "
+"left or right, a live UTC clock with stardates, and four colour schemes "
+"(Classic, Nemesis Blue, Lower Decks and Red Alert). It also includes LCARS "
+"block styles and patterns for the block editor, and works with Elementor and "
+"the Elementor Pro Theme Builder. Star Trek and LCARS are trademarks of CBS "
+"Studios Inc.; this is an unofficial fan work and is not affiliated with or "
+"endorsed by them."
 msgstr ""
 
 #. Author of the theme

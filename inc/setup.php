@@ -23,7 +23,7 @@ function n0kmo_lcars_setup() {
 	register_nav_menus(
 		array(
 			'primary' => esc_html__( 'Header buttons', 'n0kmo-lcars' ),
-			'side'    => esc_html__( 'Side panels', 'n0kmo-lcars' ),
+			'side'    => esc_html__( 'Side frame panels', 'n0kmo-lcars' ),
 			'footer'  => esc_html__( 'Footer', 'n0kmo-lcars' ),
 		)
 	);

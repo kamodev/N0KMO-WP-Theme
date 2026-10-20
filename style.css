@@ -3,15 +3,15 @@ Theme Name: N0KMO LCARS
 Theme URI: https://n0kmo.com/
 Author: N0KMO
 Author URI: https://n0kmo.com/
-Description: An LCARS-inspired WordPress theme for n0kmo.com, styled after the LCARS website templates at TheLCARS.com. It has elbow-framed header and content panels, segmented colour bars, an animated data cascade, LCARS button navigation, a side-panel menu, a live UTC clock with stardates, and four colour schemes (Classic, Nemesis Blue, Lower Decks and Red Alert). It also includes LCARS block styles and patterns for the block editor, and works with Elementor and the Elementor Pro Theme Builder. Star Trek and LCARS are trademarks of CBS Studios Inc.; this is an unofficial fan work and is not affiliated with or endorsed by them.
-Version: 1.1.0
+Description: An LCARS-inspired WordPress theme for n0kmo.com, styled after the LCARS website templates at TheLCARS.com. It has elbow-framed header and content panels, segmented colour bars, an animated data cascade, LCARS button navigation, a side-panel menu in the page frame, a frame that can sit on the left or right, a live UTC clock with stardates, and four colour schemes (Classic, Nemesis Blue, Lower Decks and Red Alert). It also includes LCARS block styles and patterns for the block editor, and works with Elementor and the Elementor Pro Theme Builder. Star Trek and LCARS are trademarks of CBS Studios Inc.; this is an unofficial fan work and is not affiliated with or endorsed by them.
+Version: 1.2.0
 Requires at least: 6.2
 Tested up to: 6.7
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: n0kmo-lcars
-Tags: dark, one-column, two-columns, right-sidebar, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, block-styles, block-patterns, wide-blocks
+Tags: dark, one-column, two-columns, left-sidebar, right-sidebar, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, block-styles, block-patterns, wide-blocks
 
 N0KMO LCARS is distributed under the terms of the GNU GPL v2 or later.
 

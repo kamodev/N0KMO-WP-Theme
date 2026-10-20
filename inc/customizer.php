@@ -46,6 +46,24 @@ function n0kmo_lcars_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		'n0kmo_lcars_frame_side',
+		array(
+			'default'           => $defaults['frame_side'],
+			'sanitize_callback' => 'n0kmo_lcars_sanitize_frame_side',
+		)
+	);
+	$wp_customize->add_control(
+		'n0kmo_lcars_frame_side',
+		array(
+			'label'       => __( 'Frame side', 'n0kmo-lcars' ),
+			'description' => __( 'Which side of the page the frame column, its elbows and the side panel menu sit on. The whole frame is mirrored.', 'n0kmo-lcars' ),
+			'section'     => 'n0kmo_lcars_interface',
+			'type'        => 'radio',
+			'choices'     => n0kmo_lcars_frame_sides(),
+		)
+	);
+
 	$text_settings = array(
 		'panel_label' => array(
 			'label'       => __( 'Corner panel label', 'n0kmo-lcars' ),
@@ -170,6 +188,16 @@ add_action( 'customize_register', 'n0kmo_lcars_customize_register' );
  */
 function n0kmo_lcars_sanitize_color_scheme( $value ) {
 	return is_string( $value ) && array_key_exists( $value, n0kmo_lcars_color_schemes() ) ? $value : 'classic';
+}
+
+/**
+ * Sanitize the frame side choice.
+ *
+ * @param string $value Submitted value.
+ * @return string
+ */
+function n0kmo_lcars_sanitize_frame_side( $value ) {
+	return is_string( $value ) && array_key_exists( $value, n0kmo_lcars_frame_sides() ) ? $value : 'left';
 }
 
 /**

@@ -9,7 +9,8 @@ An LCARS-inspired WordPress theme for [n0kmo.com](https://n0kmo.com/), styled af
 - **LCARS frame**: elbow-framed header and content panels joined to segmented colour bars, with a closing elbow at the bottom of the page.
 - **Data cascade**: animated columns of numbers in the header. They stop for visitors who prefer reduced motion and hide on phones.
 - **Button navigation**: the "Header buttons" menu renders as rectangular LCARS buttons, with a Menu toggle on small screens.
-- **Side panels**: the "Side panels" menu becomes the column of panels down the left of the page, with one level of sub-items. Without a menu, the column shows decorative numbered panels.
+- **Side panels**: the "Side frame panels" menu becomes the column of panels in the page frame, alongside the header buttons, with one level of sub-items. Without a menu, the column shows decorative numbered panels.
+- **Frame on either side**: the frame column, its elbows and the side panel menu can sit on the left (the default) or the right. The right-hand frame is an exact mirror of the left.
 - **Readouts**: a live UTC clock in the top elbow and TNG-style stardates in the header and on every post.
 - **Slashed zero**: Antonio has no slashed zero, so the banner draws one. "N0KMO" stays N0KMO for copying, search and screen readers.
 - **Four colour schemes**: Classic, Nemesis Blue, Lower Decks and Red Alert.
@@ -31,9 +32,9 @@ The theme requires WordPress 6.2 or later and PHP 7.4 or later.
 
 | Where | What |
 | --- | --- |
-| Appearance → Menus | Assign **Header buttons** (top level only), **Side panels** (two levels) and **Footer** (top level only). |
+| Appearance → Menus | Assign **Header buttons** (top level only), **Side frame panels** (two levels) and **Footer** (top level only). |
 | Appearance → Widgets | **Sidebar** shows beside content on screens 1100px and wider and below it on narrower ones. **Footer** lays its widgets out in columns. |
-| Appearance → Customize → LCARS Interface | Colour scheme, corner panel label, banner text, data cascade, UTC clock, stardates, slashed zeros, sounds, readable body font, footer text (`{year}` is replaced with the current year) and the footer credit. |
+| Appearance → Customize → LCARS Interface | Colour scheme, frame side (left or right), corner panel label, banner text, data cascade, UTC clock, stardates, slashed zeros, sounds, readable body font, footer text (`{year}` is replaced with the current year) and the footer credit. |
 | Page attributes → Template | **Full width (no sidebar)** for pages or posts that need the whole content area. |
 
 ### Block styles and patterns
@@ -102,6 +103,7 @@ languages/n0kmo-lcars.pot      Translation template
 ### Customising
 
 - **Colours**: each scheme in `assets/css/tokens.css` only reassigns role variables (`--lcars-panel-1`, `--lcars-elbow-top`, `--lcars-accent-1`, and so on). To make your own scheme, override those variables in a child theme.
+- **Frame side**: choosing Right adds `lcars-frame-right` to `<body>` (`lcars-frame-left` otherwise). The mirrored rules are in the "Frame on the right" section of `assets/css/lcars.css`.
 - **Frame size**: `--lcars-frame-w`, `--lcars-bar-h`, `--lcars-inner-r` and `--lcars-outer-rx`/`--lcars-outer-ry` control the column width, bar height and elbow curves, with smaller values set for tablets and phones.
 - **Filters**: `n0kmo_lcars_has_sidebar` (bool), `n0kmo_lcars_show_entry_header` (bool) and `n0kmo_lcars_content_width` (int, default 736).
 - **Child themes**: a child theme's `style.css` loads after the theme's styles.
